@@ -1,1 +1,3 @@
 welcome Eben to node.js introduction
+
+My begining might be small, but there is still hope
