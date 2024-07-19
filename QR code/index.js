@@ -26,7 +26,7 @@ inquirer
   });
  
     var qr_svg = qr.image(url);
-    qr_svg.pipe(fs.createWriteStream('LinkedIn QR.png'));
+    qr_svg.pipe(fs.createWriteStream('Green Ghana.png'));
   })
   .catch((error) => {
     if (error.isTtyError) {
