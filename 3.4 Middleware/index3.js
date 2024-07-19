@@ -4,16 +4,13 @@ const app = express();
 const port = 1000;
 
 // craeting my own API
-logger(function (tokens, req, res,next) {
-  return [
-    tokens.method(req, res),
-    tokens.url(req, res),
-    tokens.status(req, res),
-    tokens['response-time'](req, res), 'ms'
-  ].join(' ')
-})
+function  logger(req, res,next){
+  console.log("Requested Method:",req.method)
+  console.log("Requested URL:",req.url)
+  next()
+}
 
-app.use((req,res,));
+app.use((logger));
 
 app.get("/", (req, res) => {
   res.send("Hello");
